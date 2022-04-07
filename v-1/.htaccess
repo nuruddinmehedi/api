@@ -1,0 +1,11 @@
+
+php_flag display_error on
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^task/([0-9]+)$ controlar/task.php?taskid=$1 [L]
+RewriteRule ^task/incompleted$ controlar/task.php?completed=n [L]
+RewriteRule ^task/completed$ controlar/task.php?completed=y [L]
+RewriteRule ^task/tasks$ controlar/task.php [L]
+RewriteRule ^task/page/([0-9]+)$ controlar/task.php?pagenumber=$1 [L]
