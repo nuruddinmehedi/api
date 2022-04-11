@@ -1,8 +1,6 @@
 <?php
  require_once('db.php');
  require_once('../model/response.php');
- require_once('../model/taskmodel.php');
-
  try{
      $writeDbConnection=  Db::dbWriteConnection();
      $readDbConnection= Db::dbReadConnection();
